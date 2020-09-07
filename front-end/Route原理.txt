@@ -1,0 +1,3 @@
+所有的数据储存在一个总的App component的state里面，其余的component只负责与App交互和return html,所以实质上他们并不是react components, 只是functions；
+为了实现App component和一般components间传递，把控制routing的函数(在App component中定义)作为一般components的argument之一(prop)；
+当需要做route changing时（在一般component上触发），routing信息传递给App component，再根据此信息更新state,重新渲染时会根据state决定前往相应的route。
